@@ -32,7 +32,8 @@ def generate_data(count):
 
     data = []
     for i in range(count):
-        data.append([names[random.randint(0, len(names)-1)], random.randint(1, 100), jobs[random.randint(0, len(jobs)-1)]])
+        # names[random.randint(0, len(names)-1)] --> random.choice(names)
+        data.append([random.choice(names), random.randint(1, 100), random.choice(jobs)])
     return data
 
 
