@@ -2,7 +2,6 @@ from tabulate import tabulate
 
 
 def get_user_input():
-    """Asks the user how many people should be displayed in the table."""
     while True:
         try:
             count = int(input("How many people should be displayed in the table?: "))
@@ -15,7 +14,6 @@ def get_user_input():
 
 
 def generate_data(count):
-    """Generates a list of sample data for the table."""
     names = ["Alice", "Bob", "Charlie", "Diana", "Eve"]
     jobs = ["Engineer", "Designer", "Teacher", "Doctor", "Developer"]
     ages = [24, 30, 28, 35, 27]
@@ -29,17 +27,14 @@ def generate_data(count):
 
 
 def display_table(data):
-    """Displays the table in the console."""
     headers = ["Name", "Age", "Job"]
     print(tabulate(data, headers, tablefmt="fancy_grid"))
 
 
-def main():
-    """Main program."""
+def start_game():
     person_count = get_user_input()
     data = generate_data(person_count)
     display_table(data)
 
 
-if __name__ == "__main__":
-    main()
+start_game()
