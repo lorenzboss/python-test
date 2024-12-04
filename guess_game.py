@@ -1,12 +1,6 @@
 import random
 
-
-def ask_int(message):
-    while True:
-        try:
-            return int(input(message))
-        except ValueError:
-            print("Please enter a valid number!")
+from helper_functions.helper_functions import ask_int
 
 
 def start_game():

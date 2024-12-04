@@ -1,9 +1,4 @@
-def ask_float(message):
-    while True:
-        try:
-            return float(input(message))
-        except ValueError:
-            print("Please enter a valid number!")
+from helper_functions.helper_functions import ask_float
 
 
 def ask_operator(a, b, message):
